@@ -9,12 +9,16 @@ type Message = {
 const ANSWERS = {
   intro: (
     <p>
-      I'm Martin Morondo, Front End Developer
+     My name is Martín Morondo and I am currently studying Systems Engineering at UNICEN. I am a passionate Front-end Developer based in Argentina.
+     I love to design and create responsive websites or web apps from scratch. The technologies, tools and languages I am using to build my projects are HTML, CSS, Javascript, jQuery, React JS, Bootstrap, Tailwind, Git, GitHub and VS Code.
     </p>
   ),
   comunidad: (
     <p>
-      Si necesitas una mano, podes seguirme en mis redes o para estar en contacto etc.. <a href=".." rel="noopene noreferer" target="_blank">links...</a>
+      If you have any questions, you can contact me by e-mail: martinmorondo@gmail.com.
+      Also, I have a web page with free resources for programmers. 
+      I made this chat with the help of Goncy Pozzo's stream.
+
     </p>
   ),
   unknown: (
@@ -24,16 +28,23 @@ const ANSWERS = {
   ),
   contacto: (
     <p>
-      Si queres contactarme, podes hacer a traves de mi <a href=".." rel="noopener noreferrer" target="_blank">Twitter</a>, mi <a href="..." rel="noopener noreferrer" target="_blank">Linkedin...</a>
+      If you want to contact me, you can do it through my 
+      <a 
+      className="underline"
+      href="https://twitter.com/fSDev_10" 
+      rel="noopener noreferrer" target="_blank">Twitter</a>, 
+      or <a 
+      className="underline"
+      href="https://www.linkedin.com/in/martin-morondo/" 
+      rel="noopener noreferrer" target="_blank">Linkedin</a>
     </p>
   ),
 }
 
 const EXAMPLES = [{"text": "Hola", "label": "intro"}, {"text": "Cómo estás?", "label": "intro"}, {"text": "Quién sos?", "label": "intro"}, {"text": "Tengo una oferta para vos", "label": "contacto"}, {"text": "Por dónde te puedo contactar?", "label": "contacto"}, {"text": "Tengo una duda", "label": "comunidad"}, {"text": "Necesito solucionar algo", "label": "comunidad"}, {"text": "Estás buscando un cambio laboral?", "label": "contacto"}, {"text": "Con qué tecnologías trabajas?", "label": "intro"}, {"text": "Con qué tecnologías tenes experiencia?", "label": "intro"}, {"text": "Estás escuchando propuestas?", "label": "contacto"}, {"text": "Sabes inglés?", "label": "intro"}, {"text": "Cuántos años de experiencia tenes?", "label": "intro"}, {"text": "Te interesa cambiar de compañía?", "label": "contacto"}, {"text": "Cómo es tu Linkedin?", "label": "contacto"}, {"text": "Cómo es tu GitHub?", "label": "contacto"}, {"text": "Dónde trabajas?", "label": "comunidad"}, {"text": "Cómo hiciste este chat?", "label": "comunidad"}, {"text": "Cómo aprender a programar?", "label": "comunidad"}, {"text": "Te puedo hacer una consulta?", "label": "comunidad"}, {"text": "Tenés recursos, tutoriales?", "label": "comunidad"}, {"text": "Cuáles son tus redes?", "label": "comunidad"}, {"text": "Dónde vivis actualmente?", "label": "unkwnown"}, {"text": "Tenés currículum/CV?", "label": "intro"}, {"text": "Haces deportes?", "label": "unkwnown"}, {"text": "Qué horarios tenes libres?", "label": "intro"}, {"text": "Contame un chiste", "label": "unkwnown"}, {"text": "Cuál es tu expectativa salarial?", "label": "contacto"}, {"text": "Dónde estás trabajando?", "label": "intro"}, {"text": "Contame acerca de vos", "label": "intro"}, {"text": "Que skills manejas?", "label": "intro"}, {"text": "Cuál es tu empleo actual?", "label": "intro"}]
 
-const API_KEY = "4oMB7D3br5QVp9hN8eGXkB0ADDeAN7SbdWcCQ0HY";
 
-function App() {
+function Chat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -60,7 +71,7 @@ function App() {
     const {classifications} = await fetch("https://api.cohere.ai/v1/classify", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${API_KEY}`,
+      "Authorization": `Bearer ${import.meta.env.VITE_APP_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -89,7 +100,9 @@ function App() {
       <div className = 'flex flex-col gap-4 m-auto max-w-lg border border-white-400 p-4 rounded-md'>
         <div ref = {container} className="flex flex-col gap-4 h-[300px] overflow-y-auto">
         {messages.map((message) => (
-          <div key={message.id} className={`p-4 max-w-[80%] rounded-3xl text-white ${message.type === 'bot' ? 'bg-slate-500 text-left self-start rounded-bl-none' : 'bg-blue-500 text-right self-end rounded-br-none'}`}>{message.text}</div>
+          <div key={message.id} className={`p-4 max-w-[80%] rounded-3xl text-white ${message.type === 'bot' 
+          ? 'bg-slate-500 text-left self-start rounded-bl-none' 
+          : 'bg-blue-500 text-right self-end rounded-br-none'}`}>{message.text}</div>
            ))}
         </div>
         <form className="flex items-center" onSubmit={handleSubmit}>
@@ -105,11 +118,11 @@ function App() {
           type="submit" 
           className={`px-4 py-2 bg-blue-500 rounded-lg rounded-l-none
           ${loading ? 'bg-blue-300': 'bg-blue-500'}`}
-          >Send</button>
+          >↩</button>
         </form>
           </div>
     </main> 
   );
 }
 
-export default App;
+export default Chat;

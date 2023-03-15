@@ -7,42 +7,89 @@ type Message = {
 };
 
 const ANSWERS = {
-  intro: (
+  spanishIntro: (
     <p>
-     My name is Martín Morondo and I am currently studying Systems Engineering at UNICEN. I am a passionate Front-end Developer based in Argentina.
-     I love to design and create responsive websites or web apps from scratch. The technologies, tools and languages I am using to build my projects are HTML, CSS, Javascript, jQuery, React JS, Bootstrap, Tailwind, Git, GitHub and VS Code.
+     Mi nombre es Martín Morondo y actualmente estudio Ingeniería en Sistemas en la UNICEN. Soy un apasionado Desarrollador Front-end radicado en Argentina.
+     Me encanta diseñar y crear sitios web responsivos o aplicaciones web desde cero. Las tecnologías, herramientas y lenguajes que utilizo para construir mis proyectos son HTML, CSS, Bootstrap, Tailwind, Javascript, Typecript, jQuery, React JS, , Git, GitHub y VS Code.
+     Además, cuento con un nivel de inglés avanzado.
     </p>
   ),
-  comunidad: (
+  englishIntro: (
     <p>
-      If you have any questions, you can contact me by e-mail: martinmorondo@gmail.com.
-      Also, I have a web page with free resources for programmers. 
-      I made this chat with the help of Goncy Pozzo's stream.
+      My name is Martín Morondo and I am currently studying Systems Engineering at UNICEN. I am a passionate Front-end Developer based in Argentina.
+      I love to design and create responsive websites or web applications from scratch. The technologies, tools and languages I use to build my projects are HTML, CSS, Bootstrap, Tailwind, Javascript, jQuery, React JS, Git, GitHub and VS Code.
+      In addition, I have an advanced level of English.
+    </p>
+  ),
+  spanishContact: (
+    <p>
+      
+    </p>
+  ),
+  spanishContact: (
+    <p>
+      Si tienes alguna duda o necesitas resolver algo, puedes ponerte en contacto conmigo a través de mi correo electrónico: martinmorondo@gmail.com. 
+      Además, ¡puedes preguntarme lo que necesites!
+    </p>
+  ),
+  englishContact: (
+    <p>
+      If you have a question or need to solve something, you can contact me through my e-mail: martinmorondo@gmail.com. 
+      Also, you can ask me whatever you need!
+    </p>
+  ),
+  Trabajo: (
+    <p>
+      Actualmente no estoy trabajando y estoy escuchando propuestas laborales, ya que me encuentro buscando trabajo.
+      Tengo todos los días libres, de lunes a viernes.
+    </p>
+  ),
+  Job: (
+    <p>
+      I am currently not working and I am listening to job offers, as I am looking for a job.
+      I have every day off, Monday to Friday.
+    </p>
+  ),
+  spanishRandom: (
+    <p>
+      Actualmente vivo en la ciudad de Tandil, Buenos Aires.
+      Creé este chatbot usando la API de Co:here, que es una herramienta que te permite crear chatbots utilizando modelos de lenguaje avanzados. 
 
     </p>
   ),
-  unknown: (
+  englishRandom: (
     <p>
-      Im not really Martin, Im an AI prepared to answer questions about him. Please rephrase.
+      I currently live in the city of Tandil, Buenos Aires.
+      I created this chatbot using the Co:here API, which is a tool that allows you to create chatbots using advanced language models. 
     </p>
   ),
-  contacto: (
+  redes: (
     <p>
-      If you want to contact me, you can do it through my 
-      <a 
-      className="underline"
-      href="https://twitter.com/fSDev_10" 
-      rel="noopener noreferrer" target="_blank">Twitter</a>, 
-      or <a 
-      className="underline"
-      href="https://www.linkedin.com/in/martin-morondo/" 
-      rel="noopener noreferrer" target="_blank">Linkedin</a>
+      Mis redes sociales son las siguientes:  <a 
+      href = "https://www.linkedin.com/in/martin-morondo/" 
+      target="_blank" 
+      rel="noopener noreferrer">Linkedin</a> y mi perfil de <a 
+      href="https://github.com/martinmorondo
+      " 
+      target="_blank" 
+      rel="noopener noreferrer">GitHub</a>
+    </p>
+  ),
+  socialNetw: (
+    <p>
+     My social networks are the following: <a 
+      href = "https://www.linkedin.com/in/martin-morondo/" 
+      target="_blank" 
+      rel="noopener noreferrer" className="underline-offset-0">Linkedin</a> and my <a 
+      href="https://github.com/martinmorondo
+      " 
+      target="_blank" 
+      rel="noopener noreferrer">GitHub</a>
     </p>
   ),
 }
 
-const EXAMPLES = [{"text": "Hola", "label": "intro"}, {"text": "Cómo estás?", "label": "intro"}, {"text": "Quién sos?", "label": "intro"}, {"text": "Tengo una oferta para vos", "label": "contacto"}, {"text": "Por dónde te puedo contactar?", "label": "contacto"}, {"text": "Tengo una duda", "label": "comunidad"}, {"text": "Necesito solucionar algo", "label": "comunidad"}, {"text": "Estás buscando un cambio laboral?", "label": "contacto"}, {"text": "Con qué tecnologías trabajas?", "label": "intro"}, {"text": "Con qué tecnologías tenes experiencia?", "label": "intro"}, {"text": "Estás escuchando propuestas?", "label": "contacto"}, {"text": "Sabes inglés?", "label": "intro"}, {"text": "Cuántos años de experiencia tenes?", "label": "intro"}, {"text": "Te interesa cambiar de compañía?", "label": "contacto"}, {"text": "Cómo es tu Linkedin?", "label": "contacto"}, {"text": "Cómo es tu GitHub?", "label": "contacto"}, {"text": "Dónde trabajas?", "label": "comunidad"}, {"text": "Cómo hiciste este chat?", "label": "comunidad"}, {"text": "Cómo aprender a programar?", "label": "comunidad"}, {"text": "Te puedo hacer una consulta?", "label": "comunidad"}, {"text": "Tenés recursos, tutoriales?", "label": "comunidad"}, {"text": "Cuáles son tus redes?", "label": "comunidad"}, {"text": "Dónde vivis actualmente?", "label": "unkwnown"}, {"text": "Tenés currículum/CV?", "label": "intro"}, {"text": "Haces deportes?", "label": "unkwnown"}, {"text": "Qué horarios tenes libres?", "label": "intro"}, {"text": "Contame un chiste", "label": "unkwnown"}, {"text": "Cuál es tu expectativa salarial?", "label": "contacto"}, {"text": "Dónde estás trabajando?", "label": "intro"}, {"text": "Contame acerca de vos", "label": "intro"}, {"text": "Que skills manejas?", "label": "intro"}, {"text": "Cuál es tu empleo actual?", "label": "intro"}]
-
+const EXAMPLES = [{"text": "Hola", "label": "spanishIntro"}, {"text": "Cómo estás?", "label": "spanishIntro"}, {"text": "Quién sos?", "label": "spanishIntro"}, {"text": "Hi", "label": "englishIntro"}, {"text": "Hello", "label": "englishIntro"}, {"text": "Who are you?", "label": "englishIntro"}, {"text": "Tengo una oferta para vos", "label": "Trabajo"}, {"text": "I have an offer for you", "label": "Job"}, {"text": "Por dónde te puedo contactar?", "label": "spanishContact"}, {"text": "Where can I contact you?", "label": "englishContact"}, {"text": "Tengo una duda", "label": "spanishContact"}, {"text": "I have a question", "label": "englishContact"}, {"text": "Necesito solucionar algo", "label": "spanishContact"}, {"text": "I need to solve something", "label": "englishContact"}, {"text": "Estás buscando un cambio laboral?", "label": "Trabajo"}, {"text": "Are you looking for a job change?", "label": "Job"}, {"text": "Con qué tecnologías trabajas?", "label": "spanishIntro"}, {"text": "What technologies do you work with?", "label": "englishIntro"}, {"text": "Con qué tecnologías tenes experiencia?", "label": "spanishIntro"}, {"text": "What technologies do you have experience with?", "label": "englishIntro"}, {"text": "Estás escuchando propuestas?", "label": "spanishContact"}, {"text": "Are you listening to proposals?", "label": "englishContact"}, {"text": "Sabes inglés?", "label": "spanishIntro"}, {"text": "Do you speak English?", "label": "englishIntro"}, {"text": "Cuántos años de experiencia tenes?", "label": "spanishIntro"}, {"text": "How many years of experience do you have?", "label": "englishIntro"}, {"text": "Te interesa cambiar de compañía?", "label": "Trabajo"}, {"text": "Are you interested in switching companies?", "label": "Job"}, {"text": "Cómo es tu Linkedin?", "label": "redes"}, {"text": "What is your Linkedin link?", "label": "socialNetw"}, {"text": "Cómo es tu GitHub?", "label": "redes"}, {"text": "What is your GitHub link?", "label": "socialNetw"}, {"text": "Te puedo hacer una consulta?", "label": "spanishContact"}, {"text": "Can I ask you a question?", "label": "englishContact"}, {"text": "Tenés currículum/CV?", "label": "spanishIntro"}, {"text": "Do you have a resume/CV?", "label": "englishIntro"}, {"text": "Cuál es tu expectativa salarial?", "label": "Trabajo"}, {"text": "What is your salary expectation?", "label": "Job"}, {"text": "Dónde estás trabajando?", "label": "Trabajo"}, {"text": "Where are you working?", "label": "Job"}, {"text": "Contame acerca de vos", "label": "spanishIntro"}, {"text": "Tell me about yourself", "label": "englishIntro"}, {"text": "Que habilidades manejas?", "label": "spanishIntro"}, {"text": "What skills do you have?", "label": "englishIntro"}, {"text": "Cuál es tu empleo actual?", "label": "Trabajo"}, {"text": "What is your current job?", "label": "Job"}, {"text": "Dónde trabajas?", "label": "Trabajo"}, {"text": "Where do you work?", "label": "Job"}, {"text": "Cuáles son tus redes?", "label": "redes"}, {"text": "What are your social networks?", "label": "socialNetw"}, {"text": "Cómo hiciste este chat?", "label": "spanishRandom"}, {"text": "Cómo hiciste este chat?", "label": "englishRandom"}, {"text": "Dónde vivis actualmente?", "label": "spanishRandom"}, {"text": "Where do you currently live?", "label": "englishRandom"}, {"text": "Haces deportes?", "label": "spanishRandom"}, {"text": "Do you play sports?", "label": "englishRandom"}, {"text": "Qué horarios tenes libres?", "label": "Trabajo"}, {"text": "What times are you free?", "label": "Job"}, {"text": "Contame un chiste", "label": "spanishRandom"}, {"text": "Tell me a joke", "label": "englishRandom"}]
 
 function Chat() {
   const [messages, setMessages] = useState<Message[]>([

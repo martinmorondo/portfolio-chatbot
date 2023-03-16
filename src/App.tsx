@@ -92,7 +92,6 @@ function Chat() {
       id: '1',
       type: 'bot',
       text: "Hi, I'm a bot ready to answer some questions about Martin Morondo. Ask me your question.",
-      className: 'bot-message'
     },
     {
       id: '1',
@@ -133,7 +132,7 @@ function Chat() {
   messages.concat({
     id: String(Date.now()), 
     type: "bot", 
-    text: ANSWERS[classifications[0].prediction as keyof typeof ANSWERS] || ANSWERS["unknown"],
+    text: ANSWERS[classifications[0].prediction as keyof typeof ANSWERS] || ANSWERS["spanishRandom"],
   }),
   ))
   setLoading(false); 

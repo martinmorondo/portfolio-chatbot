@@ -97,6 +97,12 @@ function Chat() {
       id: '1',
       type: 'bot',
       text: "Hi, I'm a bot ready to answer some questions about Martin Morondo. Ask me your question.",
+      className: 'bot-message'
+    },
+    {
+      id: '1',
+      type: 'bot',
+      text: "Hola, soy un bot dispuesto a responder algunas preguntas sobre Martín Morondo. Hazme tu pregunta.",
     },
   ]);
 
@@ -143,18 +149,20 @@ function Chat() {
   }, [messages]);
 
   return (
+    <div className="min-h-screen flex flex-col justify-center items-center p-4">
+    <h1 className="font-bold rounded border border-red-100 p-4">Chatbot</h1>
     <main className="p-4">
       <div className = 'flex flex-col gap-4 m-auto max-w-lg border border-white-400 p-4 rounded-md'>
-        <div ref = {container} className="flex flex-col gap-4 h-[300px] overflow-y-auto">
+        <div ref = {container} className="container flex flex-col gap-4 h-[300px] overflow-y-auto">
         {messages.map((message) => (
-          <div key={message.id} className={`p-4 max-w-[80%] rounded-3xl text-white ${message.type === 'bot' 
+          <div key={message.id} className={`message-id p-4 max-w-[80%] rounded-3xl text-white ${message.type === 'bot' 
           ? 'bg-slate-500 text-left self-start rounded-bl-none' 
           : 'bg-blue-500 text-right self-end rounded-br-none'}`}>{message.text}</div>
            ))}
         </div>
-        <form className="flex items-center" onSubmit={handleSubmit}>
+        <form className="form flex items-center" onSubmit={handleSubmit}>
           <input 
-            placeholder="¿Who are you?" className="rounded rounded-r-none flex-1 border border-gray-400 py-2 px-4" 
+            placeholder="¿Who are you?" className="input rounded rounded-r-none flex-1 border border-gray-400 py-2 px-4" 
             name="question"
             type="text" 
             value={question}
@@ -163,12 +171,13 @@ function Chat() {
           <button 
           disabled={loading}
           type="submit" 
-          className={`px-4 py-2 bg-blue-500 rounded-lg rounded-l-none
+          className={`loading-btn px-4 py-2 bg-blue-500 rounded-lg rounded-l-none
           ${loading ? 'bg-blue-300': 'bg-blue-500'}`}
           >↩</button>
         </form>
           </div>
     </main> 
+    </div>
   );
 }
 

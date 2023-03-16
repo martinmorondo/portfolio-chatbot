@@ -1,28 +1,39 @@
 {
   "name": "chat-cohere",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "serve": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinmorondo/portfolio-chatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinmorondo/portfolio-chatbot/issues"
+  },
+  "homepage": "https://github.com/martinmorondo/portfolio-chatbot#readme",
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.2.0",
+    "node": "^19.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.7"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/node": "^18.15.0",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "dotenv": "^16.0.3",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.2",
+    "vite-plugin-windicss": "^1.8.10"
   }
 }

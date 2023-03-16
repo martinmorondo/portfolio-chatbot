@@ -23,11 +23,6 @@ const ANSWERS = {
   ),
   spanishContact: (
     <p>
-      
-    </p>
-  ),
-  spanishContact: (
-    <p>
       Si tienes alguna duda o necesitas resolver algo, puedes ponerte en contacto conmigo a través de mi correo electrónico: martinmorondo@gmail.com. 
       Además, ¡puedes preguntarme lo que necesites!
     </p>

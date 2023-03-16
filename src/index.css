@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+ 
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,12 +12,87 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+h1 {
+  padding: 20px 50px !important;
+  transition: .3s;
+  font-size: 17px;
+}
+
+h1:hover {
+  background-color: rgba(128, 128, 128, 0.129);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.message-id {
+  animation: fade-in 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.input {
+  width: 99%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px -1px rgba(246, 5, 5, 0.1), 
+  0px 2px 4px -1px rgba(255, 7, 7, 0.67);
+  transition: .3s;
+}
+
+.input:hover {
+  box-shadow: 0px 4px 6px -1px rgba(243, 203, 203, 0.559), 
+  0px 2px 4px -1px rgba(164, 132, 132, 0.223);
+}
+
+.input:focus {
+  font-weight: bold;
+}
+
+.loading-btn {
+ transition: .3s;
+ width: 60px;
+ height: 40px;
+ margin-top: 20px;
+ position: absolute;
+ left: 418px;
+ top: -21px;
+ font-size: 19px;
+ background-color: transparent;
+}
+
+.loading-btn:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 

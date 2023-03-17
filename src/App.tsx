@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import './input.css';
 import './index.css';
 
 import { useState, useEffect, useRef } from "react";

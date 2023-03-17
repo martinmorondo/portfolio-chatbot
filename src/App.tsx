@@ -1,8 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect, useRef } from "react";
-import './index.css';
 import './input.css';
-
+import './index.css';
 
 type Message = {
   id: string;
@@ -98,7 +97,7 @@ function Chat() {
       text: "Hi, I'm a bot ready to answer some questions about Martin Morondo. Ask me your question.",
     },
     {
-      id: '1',
+      id: '2',
       type: 'bot',
       text: "Hola, soy un bot dispuesto a responder algunas preguntas sobre Martín Morondo. Hazme tu pregunta.",
     },

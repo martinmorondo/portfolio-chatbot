@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "dev": "vite",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "build:css": "tailwindcss build input.css -o output.css"
   },
   "repository": {
     "type": "git",

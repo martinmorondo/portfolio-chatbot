@@ -148,15 +148,15 @@ function Chat() {
   }, [messages]);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center p-4">
-    <h1 className="font-bold rounded border border-red-100 p-4">Chatbot</h1>
+    <div className="main-container min-h-screen flex flex-col justify-center items-center p-4">
+    <h1 className="main-text font-bold rounded border border-red-100 p-4">Chatbot</h1>
     <main className="p-4">
-      <div className = 'flex flex-col gap-4 m-auto max-w-lg border border-white-400 p-4 rounded-md'>
+      <div className = 'flex-container flex flex-col gap-4 m-auto max-w-lg border border-white-400 p-4 rounded-md'>
         <div ref = {container} className="container flex flex-col gap-4 h-[300px] overflow-y-auto">
         {messages.map((message) => (
           <div key={message.id} className={`message-id p-4 max-w-[80%] rounded-3xl text-white ${message.type === 'bot' 
-          ? 'bg-slate-500 text-left self-start rounded-bl-none' 
-          : 'bg-blue-500 text-right self-end rounded-br-none'}`}>{message.text}</div>
+          ? 'bot bg-slate-500 text-left self-start rounded-bl-none' 
+          : 'user bg-blue-500 text-right self-end rounded-br-none'}`}>{message.text}</div>
            ))}
         </div>
         <form className="form flex items-center" onSubmit={handleSubmit}>

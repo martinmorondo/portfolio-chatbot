@@ -1,6 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect, useRef } from "react";
 import './index.css';
+import './input.css';
+
 
 type Message = {
   id: string;

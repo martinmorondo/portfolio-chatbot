@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -122,9 +126,9 @@ form {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   flex: 1;
-  border: 1px solid #CBD5E0;
+  border: 0.1px solid rgba(255, 0, 0, 0.297);
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
   padding-left: 1rem;
   padding-right: 1rem;
 

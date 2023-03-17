@@ -160,7 +160,7 @@ function Chat() {
         </div>
         <form className="form flex items-center" onSubmit={handleSubmit}>
           <input 
-            placeholder="¿Who are you?" className="input rounded rounded-r-none flex-1 border border-gray-400 py-2 px-4" 
+            placeholder="¿Who are you?" className="input py-2 px-4" 
             name="question"
             type="text" 
             value={question}
@@ -169,7 +169,7 @@ function Chat() {
           <button 
           disabled={loading}
           type="submit" 
-          className={`loading-btn px-4 py-2 bg-blue-500 rounded-lg rounded-l-none
+          className={`loading-btn px-4 py-2 bg-blue-500 rounded-lg rounded--none
           ${loading ? 'bg-blue-300': 'bg-blue-500'}`}
           >↩</button>
         </form>

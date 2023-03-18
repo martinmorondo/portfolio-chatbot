@@ -20,6 +20,7 @@
     "url": "https://github.com/martinmorondo/portfolio-chatbot/issues"
   },
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -12,7 +12,7 @@ const ANSWERS = {
     <p>
      Mi nombre es Martín Morondo y actualmente estudio Ingeniería en Sistemas en la UNICEN. Soy un apasionado Desarrollador Front-end radicado en Argentina.
      Me encanta diseñar y crear sitios web responsivos o aplicaciones web desde cero. Las tecnologías, herramientas y lenguajes que utilizo para construir mis proyectos son HTML, CSS, Bootstrap, Tailwind, Javascript, Typecript, jQuery, React JS, , Git, GitHub y VS Code.
-     Además, cuento con un nivel de inglés avanzado.
+     Además, cuento con un nivel de inglés avanzado. ☺️
     </p>
   ),
   englishIntro: (

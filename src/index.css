@@ -74,31 +74,6 @@ h1:hover {
   max-width: 80%;
   border-radius: 1.5rem;
   color: white;
-
-}
-
-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 20px;
-}
-
-.bot {
-  background-color: #64748B;
-  text-align: left;
-  align-self: flex-start;
-  border-bottom-left-radius: 0;
-}
-
-.user {
-  background-color: #3B82F6;
-  text-align: right;
-  align-self: flex-end;
-  border-bottom-right-radius: 0;
-
 }
 
 @keyframes fade-in {
@@ -112,6 +87,16 @@ form {
   100% {
     opacity: 1;
   }
+}
+
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
 }
 
 .input {

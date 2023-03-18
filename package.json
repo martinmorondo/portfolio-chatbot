@@ -2,44 +2,39 @@
   "name": "chat-cohere",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/App.tsx",
+  "main": "postcss.config.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
     "dev": "vite",
-    "serve": "vite preview",
-    "build:css": "postcss input.css -o dist/output.css"
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/martinmorondo/portfolio-chatbot.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/martinmorondo/portfolio-chatbot/issues"
   },
-  "homepage": "https://github.com/martinmorondo/portfolio-chatbot#readme",
   "dependencies": {
-    "@vitejs/plugin-react-swc": "^3.2.0",
-    "node": "^19.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-refresh": "^0.14.0"
+    "react-dom": "^18.2.0"
   },
+  "homepage": "https://github.com/martinmorondo/portfolio-chatbot#readme",
   "devDependencies": {
-    "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
+    "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.36.0",
     "eslint-plugin-react": "^7.32.2",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "typescript": "^5.0.2",
-    "vite-plugin-windicss": "^1.8.10"
+    "vite": "^4.2.0"
   }
 }

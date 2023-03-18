@@ -1,6 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
-import './index.css';
-
 import { useState, useEffect, useRef } from "react";
 
 

@@ -1,2 +1,2 @@
-# portfolio-chatbot
-Chatbot integrated in the portfolio that answers questions about me
+# Chatbot interactivo de preguntas y respuestas 
+Este es un chatbot interactivo construido con React y Typescript, diseñado para responder preguntas comunes sobre mi persona y algunas en general. El chatbot utiliza una serie de respuestas predefinidas para las preguntas más frecuentes y permite a los usuarios enviar nuevas preguntas y recibir respuestas en tiempo real. Esta aplicación también cuenta con un mensaje de error que se muestra si el chatbot no puede entender la pregunta del usuario. 
